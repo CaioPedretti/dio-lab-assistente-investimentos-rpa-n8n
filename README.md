@@ -1,3 +1,28 @@
+**Conclusção e Justificativa**
+
+**Assistente de Investimentos Automatizado com n8n**
+
+Este projeto cria um assistente virtual que cruza automaticamente o perfil de clientes com opções de investimentos. O objetivo é analisar o saldo e o perfil de risco de cada pessoa e recomendar o produto financeiro mais adequado, entregando uma mensagem final pronta para envio.
+
+O que a automação faz:
+
+Coleta os dados financeiros e o perfil de cada cliente.
+
+Analisa as opções de investimentos disponíveis no sistema.
+
+Cruza as duas informações para encontrar o investimento ideal que respeita o perfil e o saldo mínimo de cada pessoa.
+
+Gera mensagens personalizadas de recomendação financeira de forma automática.
+
+**Por que o fluxo original foi simplificado:**
+Durante a construção deste projeto eu tomei a decisão de remover uma das caixas de processamento intermediárias que dividiam a lógica em várias etapas. Manter nós separados apenas para cruzar os dados e depois formatar os textos deixava a automação desnecessariamente complexa e muito mais sujeita a quebras de formatação no meio do caminho.
+
+Para resolver isso eu centralizei toda a validação de regras e a criação das mensagens num único bloco de código JavaScript. Essa abordagem deixou o programa muito mais rápido e previsível. O código avalia o dinheiro da pessoa, cruza com as regras do investimento e já constrói o texto exato da recomendação na mesma etapa. Isso garante que os dados cheguem perfeitos ao final do fluxo e facilita muito a manutenção do projeto no futuro.
+
+![Fluxo do Projeto](dio-lab-assistente-investimentos-rpa-n8n%20.png)
+
+
+
 # Criando um Assistente de Investimentos com RPA e IA Generativa
 
 ## Descrição
@@ -170,26 +195,3 @@ Conecte o Agente de IA do N8N a um modelo como Gemini ou GPT para:
 **Bons estudos e mãos à obra** 🚀
 
 Se tiver dúvidas, lembre-se: a melhor forma de aprender é experimentando. Erre, corrija e celebre cada pequena vitória no caminho.
-
-**Conclusção e Justificativa**
-
-**Assistente de Investimentos Automatizado com n8n**
-
-Este projeto cria um assistente virtual que cruza automaticamente o perfil de clientes com opções de investimentos. O objetivo é analisar o saldo e o perfil de risco de cada pessoa e recomendar o produto financeiro mais adequado, entregando uma mensagem final pronta para envio.
-
-O que a automação faz:
-
-Coleta os dados financeiros e o perfil de cada cliente.
-
-Analisa as opções de investimentos disponíveis no sistema.
-
-Cruza as duas informações para encontrar o investimento ideal que respeita o perfil e o saldo mínimo de cada pessoa.
-
-Gera mensagens personalizadas de recomendação financeira de forma automática.
-
-**Por que o fluxo original foi simplificado:**
-Durante a construção deste projeto eu tomei a decisão de remover uma das caixas de processamento intermediárias que dividiam a lógica em várias etapas. Manter nós separados apenas para cruzar os dados e depois formatar os textos deixava a automação desnecessariamente complexa e muito mais sujeita a quebras de formatação no meio do caminho.
-
-Para resolver isso eu centralizei toda a validação de regras e a criação das mensagens num único bloco de código JavaScript. Essa abordagem deixou o programa muito mais rápido e previsível. O código avalia o dinheiro da pessoa, cruza com as regras do investimento e já constrói o texto exato da recomendação na mesma etapa. Isso garante que os dados cheguem perfeitos ao final do fluxo e facilita muito a manutenção do projeto no futuro.
-
-![Fluxo do Projeto](dio-lab-assistente-investimentos-rpa-n8n%20.png)
